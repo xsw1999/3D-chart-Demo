@@ -9,7 +9,7 @@
 
 ## 效果
 
-  ![image](public/截屏2022-08-10 20.26.33.png)
+  ![image](public/demo.png)
 
 ## 备注
 
