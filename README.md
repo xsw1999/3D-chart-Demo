@@ -1,16 +1,19 @@
-# Vue 3 + TypeScript + Vite
+# 说明
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+## Run
 
-## Recommended IDE Setup
+  `npm i`
+  `npm run dev`
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar)
+  如果运行失败可能是 [node](https://nodejs.org/en/download/) 版本导致的，官网提示 Vite3 需要Node.js 14.18+、16+
 
-## Type Support For `.vue` Imports in TS
+## 效果
 
-Since TypeScript cannot handle type information for `.vue` imports, they are shimmed to be a generic Vue component type by default. In most cases this is fine if you don't really care about component prop types outside of templates. However, if you wish to get actual prop types in `.vue` imports (for example to get props validation when using manual `h(...)` calls), you can enable Volar's Take Over mode by following these steps:
+  ![image](/public/截屏2022-08-10 20.26.33.png)
 
-1. Run `Extensions: Show Built-in Extensions` from VS Code's command palette, look for `TypeScript and JavaScript Language Features`, then right click and select `Disable (Workspace)`. By default, Take Over mode will enable itself if the default TypeScript extension is disabled.
-2. Reload the VS Code window by running `Developer: Reload Window` from the command palette.
+## 备注
 
-You can learn more about Take Over mode [here](https://github.com/johnsoncodehk/volar/discussions/471).
+  最近写项目碰到的需求，抽空单独拎出来整理一下，鼠标移入可能会卡顿，这是为了保证每个面都能贴合，所以生成了很多个面，否则中间会有空隙
+  觉得卡可以将曲面方程 302 行 step 的值稍微增大以此来减少生成的面
+
+  在某个图例被收起的时候如果加入了新的数据，记得将所有图例打开后再重新加载图表，否则会出现问题
