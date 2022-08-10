@@ -2,14 +2,14 @@
 
 ## Run
 
-  `npm i`
+  `npm i` <br/>
   `npm run dev`
 
   如果运行失败可能是 [node](https://nodejs.org/en/download/) 版本导致的，官网提示 Vite3 需要Node.js 14.18+、16+
 
 ## 效果
 
-  ![image](/public/截屏2022-08-10 20.26.33.png)
+  ![image](public/截屏2022-08-10 20.26.33.png)
 
 ## 备注
 
