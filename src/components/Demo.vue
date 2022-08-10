@@ -78,6 +78,11 @@ let simple = ref({
       color: 'black',
       fontSize: '12',
     },
+    selected:{
+      data1:true,
+      data2:true,
+      data3:true
+    }
   },
   xAxis3D: {
     name: 'X', // 坐标轴名称
@@ -151,11 +156,12 @@ const back = (obj, ele) => {
 }
 
 const change = () => {
-  myChart = null
   // 虽然在代码中自定义了参数 isShow 控制图例对应的数据是否展示，但是E charts还是修改了原数据的 legend.selected 内的图例字段，所以当数据有变化时候需要手动将图例显示出来
   data.value.forEach(i => {
     i.isShow = true
+    simple.value.legend.selected[i.name] = true
   })
+  myChart = null
   initEcharts()
 }
 
@@ -169,6 +175,7 @@ const add = () => {
       color: `${colors.value[Math.floor(Math.random() * 6)]}`,
     },
   })
+  simple.value.legend.selected[`data${data.value.length + 1}`] = true
 }
 
 // 生成模拟3d饼图的配置项
@@ -265,6 +272,7 @@ const initEcharts = () => {
     if (!loading.value) {
       data.value.filter(i => i.name === obj.name)[0].isShow =
         !data.value.filter(i => i.name === obj.name)[0].isShow
+      simple.value.legend.selected[obj.name] = !simple.value.legend.selected[obj.name]
       initEcharts()
     }
     loading.value = true
