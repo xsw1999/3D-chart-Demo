@@ -9,7 +9,7 @@
 
 ## 效果
 
-  ![image](public/demo.png)
+  ![image](src/img/demo.png)
 
 ## 备注
 
